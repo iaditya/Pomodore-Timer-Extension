@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Timer Extension",
+    "version": "1.0.0",
+    "description": "My First chrome extension.",
+    "icons": {
+        "16": "clock.png",
+        "48": "clock.png",
+        "128": "clock.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "clock.png",
+            "32": "clock.png",
+            "64": "clock.png"
+        },
+        "default_tile": "Timer Extension",
+        "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "permissions": [
+        "storage",
+        "alarms",
+        "notifications"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
