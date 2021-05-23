@@ -1,14 +1,14 @@
-console.log("hello from service worker");
-
-let time = 0;
-
 chrome.alarms.create({
   periodInMinutes: 1 / 60,
 });
 
 chrome.alarms.onAlarm.addListener((alarm) => {
-  chrome.storage.local.get(["time"], (result) => {
+  chrome.storage.local.get(["time", "isRunnning"], (result) => {
     const time = result.time ?? 0;
+    const isRunnning = !!result.isRunnning;
+    if (!isRunnning) {
+      return;
+    }
     chrome.storage.local.set({
       time: time + 1,
     });
@@ -17,7 +17,8 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     });
 
     chrome.storage.sync.get(["notificationTime"], (res) => {
-      if (time % res.notificationTime == 0) {
+      console.log("time is ", time);
+      if (time != 0 && time % res.notificationTime == 0) {
         this.registration.showNotification("Chrome Timer Ext", {
           body: `${res.notificationTime} second has passed`,
           icon: "clock.png",
