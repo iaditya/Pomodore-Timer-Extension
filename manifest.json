@@ -7,5 +7,10 @@
         "16": "clock.png",
         "48": "clock.png",
         "128": "clock.png"
+    },
+    "action": {
+        "default_icon": "clock.png",
+        "default_title": "Pomodore Timer",
+        "default_popup": "popup/popup.html"
     }
 }
