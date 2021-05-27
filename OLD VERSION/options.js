@@ -15,3 +15,5 @@ chrome.storage.sync.get(["name", "notificationTime"], (result) => {
   inputElement.value = result.name ?? "????";
   inputTimer.value = result.notificationTime ?? 1000;
 });
+
+console.log("options page");

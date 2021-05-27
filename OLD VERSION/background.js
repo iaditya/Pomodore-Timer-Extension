@@ -27,3 +27,5 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     });
   });
 });
+
+console.log("background page 1");

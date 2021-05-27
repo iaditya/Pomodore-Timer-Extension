@@ -40,3 +40,5 @@ resetBtn.addEventListener("click", () => {
     time: 0,
   });
 });
+
+console.log("popup page");
