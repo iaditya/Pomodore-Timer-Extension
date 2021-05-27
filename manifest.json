@@ -12,5 +12,8 @@
         "default_icon": "clock.png",
         "default_title": "Pomodore Timer",
         "default_popup": "popup/popup.html"
-    }
+    },
+    "permissions": [
+        "storage"
+    ]
 }
