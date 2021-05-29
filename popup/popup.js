@@ -12,8 +12,10 @@ chrome.storage.local.get(["isRunning"], (res) => {
 setInterval(updateTime, 1000);
 
 function updateTime() {
-  chrome.storage.local.get(["timer", "isRunning"], (res) => {
-    const minutes = `${25 - Math.ceil(res.timer / 60)}`.padStart(2, 0);
+  chrome.storage.local.get(["timer", "isRunning", "timeOption"], (res) => {
+    const timeOption = res.timeOption;
+
+    const minutes = `${timeOption - Math.ceil(res.timer / 60)}`.padStart(2, 0);
     let seconds = "00";
     if (res.timer % 60 != 0) {
       seconds = `${60 - Math.ceil(res.timer % 60)}`.padStart(2, 0);
