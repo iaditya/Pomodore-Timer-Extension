@@ -1,9 +1,77 @@
 body {
   height: 400px;
-  width: 500px;
+  width: 400px;
+  background-color: indianred;
 }
 
 .header {
   display: flex;
   justify-content: center;
+  height: 40px;
+  background-color: whitesmoke;
+  margin: -8px;
+  padding: 5px;
+}
+
+#time {
+  text-align: center;
+  font-size: 50px;
+  font-weight: normal;
+  margin: 15px;
+  color: whitesmoke;
+}
+
+#btn-container {
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#btn-container > button {
+  cursor: pointer;
+  padding: 7px 10px;
+  background-color: whitesmoke;
+  color: indianred;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: lighter;
+  width: 100px;
+}
+
+#btn-container > button:hover {
+  background-color: lightgray;
+}
+
+#task-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  overflow: scroll;
+}
+
+#task-container > div {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.task-input {
+  outline: 0;
+  padding: 7px 15px;
+  border-radius: 3px;
+  margin-right: 10px;
+  width: 250px;
+  border: none;
+}
+.task-delete {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: indianred;
+  background-color: whitesmoke;
+  padding: 7px 10px;
 }
